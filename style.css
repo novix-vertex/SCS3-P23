@@ -170,9 +170,12 @@ header .profile i {
     gap: 20px;
 }
 
-.hero .content h1 span {
+.hero .content h1 span .box{
     border: 1px solid #e8602e;
-    padding-inline: 5px;
+    height:75px;
+    width:330px;
+    display: inline-block;
+    position:absolute;
 }
 
 .hero .content h1 .companies-lbl {
