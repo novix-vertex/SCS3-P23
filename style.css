@@ -3,6 +3,7 @@
     --white-color: #fff;
     --orange-color: #e8602e;
     --btn-gradient: linear-gradient(96.76deg, rgb(232, 96, 46) 5.3%, rgb(52, 14, 0) 234.66%) right center / 150% 100% border-box padding-box, border-box;
+    --bg-gradient: radial-gradient(rgb(232, 96, 46), #000, #000, #000);
 }
 
 @font-face {
@@ -35,12 +36,43 @@ main {
     color: var(--white-color);
 }
 
+.dots {
+    position: absolute;
+    width: 250px;
+    height: 250px;
+
+    background-image:
+        radial-gradient(rgba(255, 100, 40, 0.5) 1px,
+            transparent 1px);
+
+    background-size: 16px 16px;
+
+    opacity: 0.5;
+}
+
+.dots-left {
+    left: 120px;
+    top: 200px;
+}
+
+.dots-right {
+    right: 120px;
+    top: 300px;
+}
+
 header {
     padding: 35px 65px;
 
     display: flex;
     justify-content: space-between;
     align-content: center;
+    background: transparent;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
 }
 
 header .logo {
@@ -100,10 +132,37 @@ header .profile i {
     font-size: 20px;
     font-weight: 100;
 }
-.hero{
+
+.hero {
+    height: 100vh;
+    background: var(--black-color);
+    background:
+        radial-gradient(circle at center,
+            rgba(120, 25, 0, 0.45) 0%,
+            rgba(40, 8, 0, 0.6) 30%,
+            #000 70%),
+
+        linear-gradient(to right,
+            transparent 24%,
+            rgba(255, 255, 255, 0.05) 25%,
+            transparent 26%),
+
+        linear-gradient(to bottom,
+            transparent 49%,
+            rgba(255, 255, 255, 0.05) 50%,
+            transparent 51%),
+
+        linear-gradient(45deg,
+            transparent 48%,
+            rgba(255, 255, 255, 0.04) 49%,
+            rgba(255, 255, 255, 0.04) 50%,
+            transparent 51%);
+}
+
+.hero .content {
 
     width: 100%;
-    min-height: calc(100vh - 130px);
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -111,56 +170,57 @@ header .profile i {
     gap: 20px;
 }
 
-.hero .views{
+.hero .content .views {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap:10px;
+    gap: 10px;
 }
 
-.hero .views .avtar-row{
-    display:flex;
+.hero .content .views .avtar-row {
+    display: flex;
     justify-content: center;
     align-items: center;
 }
-.hero .views .avtar-row .student-img{
-    height:30px;
-    width:30px;
+
+.hero .content .views .avtar-row .student-img {
+    height: 30px;
+    width: 30px;
     object-fit: cover;
     object-position: center;
-    border:2px solid #fff;
+    border: 2px solid #fff;
     border-radius: 50%;
-    margin-left:-10px;
+    margin-left: -10px;
 }
 
-.hero h4,
-.hero .views .st-count {
+.hero .content h4,
+.hero .content .views .st-count {
     color: var(--orange-color);
 }
 
-.hero .views .st-count{
+.hero .content .views .st-count {
     font-weight: 600;
 }
 
-.hero .views .other-p{
+.hero .content .views .other-p {
     color: var(--white-color);
     opacity: 0.6;
 }
 
-.hero h4 {
+.hero .content h4 {
     text-transform: uppercase;
     font-size: 20px;
     font-weight: 500;
 }
 
-.hero p {
+.hero .content p {
     font-size: 24px;
     color: var(--white-color);
     opacity: 0.6;
     text-align: center;
 }
 
-.hero .start-journey {
+.hero .content .start-journey {
     background: var(--btn-gradient);
     border: none;
     border-radius: 10px;
@@ -172,20 +232,19 @@ header .profile i {
     font-weight: 600;
 }
 
-.hero .start-jounery i {
+.hero .content .start-jounery i {
     color: var(--white-color);
     font-size: 16px;
     font-weight: 600;
 }
 
-.hero .start-jounery:hover {
+.hero .content .start-jounery:hover {
     box-shadow: 0 10px 10px var(--orange-color);
 }
 
-.hero h1 {
+.hero .content h1 {
     font-family: machina;
     font-size: 60px;
     text-align: center;
     text-transform: capitalize;
 }
-
