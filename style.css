@@ -2,7 +2,7 @@
     --black-color: #000;
     --white-color: #fff;
     --orange-color: #e8602e;
-    --btn-gradient: linear-gradient(96.76deg, rgb(232, 96, 46) 5.3%, rgb(52, 14, 0) 234.66%) right center / 150% 100% border-box padding-box, border-box;
+    --btn-gradient: linear-gradient(90deg, #e8602e, #a12d03);
     --bg-gradient: radial-gradient(rgb(232, 96, 46), #000, #000, #000);
 }
 
@@ -41,13 +41,13 @@ main {
     width: 250px;
     height: 250px;
 
-    background-image:
+    background:
         radial-gradient(rgba(255, 100, 40, 0.5) 1px,
             transparent 1px);
 
     background-size: 16px 16px;
 
-    opacity: 0.5;
+    opacity: 0.3;
 }
 
 .dots-left {
