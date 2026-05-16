@@ -2,13 +2,17 @@
     --black-color: #000;
     --white-color: #fff;
     --orange-color: #e8602e;
-    --ascent-color: #e8602e;
     --btn-gradient: linear-gradient(96.76deg, rgb(232, 96, 46) 5.3%, rgb(52, 14, 0) 234.66%) right center / 150% 100% border-box padding-box, border-box;
 }
 
 @font-face {
     font-family: manrope;
     src: url('assets/fonts/Manrope-VariableFont_wght.woff2');
+}
+
+@font-face {
+    font-family: machina;
+    src: url(assets/fonts/NeueMachina-Regular.otf);
 }
 
 * {
@@ -41,11 +45,12 @@ header {
 
 header .logo {
     height: 36px;
-    width:auto;
+    width: auto;
 }
-header nav{
-    background-color:#0C0C0C;
-    padding:15px 30px;
+
+header nav {
+    background-color: #0C0C0C;
+    padding: 15px 30px;
     border-radius: 10px;
     box-shadow: 1px 1px 1px #ffffff66;
 }
@@ -64,6 +69,15 @@ header nav menu ul li {
 header nav menu ul li a {
     text-decoration: none;
     color: var(--white-color);
+    opacity: 0.8;
+}
+
+header nav menu ul li a:active {
+    color: var(--white-color);
+}
+
+header nav menu ul li a:hover {
+    color: var(--orange-color);
 }
 
 header .profile {
@@ -86,3 +100,92 @@ header .profile i {
     font-size: 20px;
     font-weight: 100;
 }
+.hero{
+
+    width: 100%;
+    min-height: calc(100vh - 130px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.hero .views{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:10px;
+}
+
+.hero .views .avtar-row{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.hero .views .avtar-row .student-img{
+    height:30px;
+    width:30px;
+    object-fit: cover;
+    object-position: center;
+    border:2px solid #fff;
+    border-radius: 50%;
+    margin-left:-10px;
+}
+
+.hero h4,
+.hero .views .st-count {
+    color: var(--orange-color);
+}
+
+.hero .views .st-count{
+    font-weight: 600;
+}
+
+.hero .views .other-p{
+    color: var(--white-color);
+    opacity: 0.6;
+}
+
+.hero h4 {
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.hero p {
+    font-size: 24px;
+    color: var(--white-color);
+    opacity: 0.6;
+    text-align: center;
+}
+
+.hero .start-journey {
+    background: var(--btn-gradient);
+    border: none;
+    border-radius: 10px;
+    padding: 15px 30px;
+    cursor: pointer;
+    margin-block: 10px;
+    color: var(--white-color);
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.hero .start-jounery i {
+    color: var(--white-color);
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.hero .start-jounery:hover {
+    box-shadow: 0 10px 10px var(--orange-color);
+}
+
+.hero h1 {
+    font-family: machina;
+    font-size: 60px;
+    text-align: center;
+    text-transform: capitalize;
+}
+
